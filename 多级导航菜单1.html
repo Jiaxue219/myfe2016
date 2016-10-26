@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>多级导航菜单</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		#menu li {
+			float: left;
+			margin-right: 3px;
+		}
+
+		#menu .main-menu {
+			display: block;
+			width: 120px;
+			height: 30px;
+			background: #cccccc;
+			text-align: center;
+			line-height: 30px;
+		}
+
+		#menu .sub-menu {
+			display: none;
+			background: #eeeeee;
+		}
+
+		#menu .sub-menu li {
+			float: none;
+			text-align: center;
+			height: 30px;
+			border-bottom: 1px dotted blue;
+		}
+
+		#menu .sub-menu a {
+			height: 100%;
+			line-height: 30px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li>
+			<a href="#" class="main-menu">link 1</a>
+			<ul class="sub-menu">
+				<li><a href="#">sublink 1</a></li>
+				<li><a href="#">sublink 2</a></li>
+				<li><a href="#">sublink 3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="main-menu">link 2</a>
+			<ul class="sub-menu">
+				<li><a href="#">sublink 1</a></li>
+				<li><a href="#">sublink 2</a></li>
+				<li><a href="#">sublink 3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="main-menu">link 3</a>
+			<ul class="sub-menu">
+				<li><a href="#">sublink 1</a></li>
+				<li><a href="#">sublink 2</a></li>
+				<li><a href="#">sublink 3</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script>
+		var oMenu = document.getElementById('menu');
+		var aMainMenu = oMenu.getElementsByTagName('a');
+		var aSubMenu = oMenu.getElementsByTagName('ul');
+		var count = 0;
+		for(var i=0; i<aMainMenu.length; i++){
+			if(aMainMenu[i].className == 'main-menu'){
+				aMainMenu[i].index = count++;
+				aMainMenu[i].onmouseover = function(){
+					aSubMenu[  this.index  ].style.display = 'block';
+				};
+				aMainMenu[i].onmouseout = function(){
+					aSubMenu[  this.index  ].style.display = 'none';
+				};
+			}
+		}
+	</script>
+</body>
+</html>
