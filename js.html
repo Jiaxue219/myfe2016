@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+
+	<script>
+//		function aa(str){//形参
+//			alert(str);
+//		}
+//		aa('hahah');//实参
+
+
+		//函数式编程？？？
+
+		function aa(b){// b = function(c){c('hehehe');}  //c=function(d){alert(d);}
+
+			b(function(d){
+				alert(d);
+			});
+		}
+
+		aa(function(c){
+			c('hehehe');
+		});
+	</script>
+</body>
+</html>
