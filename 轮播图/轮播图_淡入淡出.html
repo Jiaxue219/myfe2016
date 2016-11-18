@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>轮播图_淡入淡出</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		img{
+			border: 0;
+		}
+		#container{
+			width: 700px;
+			height: 400px;
+			margin: 50px auto;
+			position: relative;
+		}
+		#nav li,#arrows span{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: #000;
+			color: #ffffff;
+			margin-right: 10px;
+			text-align: center;
+			line-height: 20px;
+			cursor: pointer;
+		}
+		#nav li.selected{
+			background: orange;
+		}
+		#nav{
+			position: absolute;
+			right: 20px;
+			bottom: 10px;
+			z-index: 9999;
+		}
+		#arrows{
+			position: absolute;
+			left: 20px;
+			bottom: 10px;
+			z-index: 9999;
+		}
+		img{
+			width: 700px;
+			height: 400px;
+		}
+		#content{
+			position: relative;
+		}
+		#content img{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#content img.selected{
+			display: block;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="container">
+		<ul id="nav">
+			<li class="selected">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<div id="content">
+			<img src="img/1.jpg"  class="selected">
+			<img src="img/2.jpg">
+			<img src="img/3.jpg">
+			<img src="img/4.jpg">
+		</div>
+		<div id="arrows">
+			<span id="prev" onselectstart = "return false">&lt;</span>
+			<span id="next" onselectstart = "return false">&gt;</span>
+		</div>
+	</div>
+	<script src="jslib.js"></script>
+	<script>
+		var oContainer = document.getElementById('container');
+		var oContent = document.getElementById('content');
+		var aImg = oContent.getElementsByTagName('img');
+		var oNav = document.getElementById('nav');
+		var aLi = oNav.getElementsByTagName('li');
+		var oPrev = document.getElementById('prev');
+		var oNext = document.getElementById('next');
+
+		var zIndex = 4;
+		var iNow = 0;
+
+		for(var i=0; i<aLi.length; i++){
+			aImg[i].style.zIndex = aImg.length - i;
+
+			aLi[i].index = i;
+			aLi[i].onmouseover = function(){
+				iNow = this.index;
+				changeImg(iNow);
+			};
+		}
+		oPrev.onclick = function(){
+			iNow--;
+			if(iNow == -1){
+				iNow = aImg.length-1;
+			}
+			changeImg(iNow);
+		};
+		oNext.onclick = function(){
+			iNow++;
+			if(iNow == aImg.length){
+				iNow = 0;
+			}
+			changeImg(iNow);
+		};
+		function changeImg(idx){
+			for(var i=0; i<aLi.length; i++){
+				aLi[i].className = '';
+			}
+			aLi[idx].className = 'selected';
+			var oImg = aImg[idx];
+			oImg.style.opacity = 0;
+			oImg.style.filter = 'alpha(opacity: 0)';
+			oImg.style.zIndex = ++zIndex;
+			animate(oImg, {opacity: 100});
+		}
+		var timer;
+		function run(){
+			timer = setInterval(function(){
+				oNext.onclick();
+			}, 1200)
+		}
+		run();
+		oContainer.onmouseover = function(){
+			clearInterval(timer);
+		};
+		oContainer.onmouseout = function(){
+			run();
+		};
+	</script>
+</body>
+</html>
