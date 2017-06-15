@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.circle{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border-width: 10px;
+			border-style: solid;
+			position: absolute;
+		}
+		.blue{
+			border-color: blue;
+			left: 0;
+			top: 0;
+		}
+		.blue.circle ::after{
+			booder-color: red;
+		}
+		.black{
+			border-color: black;
+			left: 230px;
+			top: 0;
+		}
+		.red{
+			border-color: red;
+			left: 460px;
+			top: 0;
+		}
+		.yellow{
+			border-color: yellow;
+			left: 110px;
+			top: 110px;
+		}
+		.green{
+			border-color: green;
+			left: 340px;
+			top: 110px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="circle blue"></div>
+	<div class="circle black"></div>
+	<div class="circle red"></div>
+	<div class="circle yellow"></div>
+	<div class="circle green"></div>
+</body>
+</html>

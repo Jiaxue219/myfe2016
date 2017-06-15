@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			position: relative;
+		}
+		#container img{
+			position: absolute;
+		}
+		#home{
+			bottom: 0;
+			right: 0;
+		}
+		/*#refresh{*/
+			/*right: 0;*/
+			/*top: 0;*/
+		/*}*/
+		/*#close{*/
+			/*left: 0;*/
+			/*bottom: 0;*/
+		/*}*/
+		.rotate{
+			-webkit-animation: rotate 1s ease backwards;
+			-o-animation: rotate 1s ease backwards;
+			animation: rotate 1s ease backwards;
+		}
+		@-webkit-keyframes rotate{
+			from{
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			to{
+				-webkit-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+				-ms-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<img src="img/close.png" alt="" id="close" class="btn"/>
+	<img src="img/full.png" alt="" id="full" class="btn"/>
+	<img src="img/home.png" alt="" id="home"/>
+	<img src="img/open.png" alt="" id="open" class="btn"/>
+	<img src="img/prev.png" alt="" id="prev" class="btn"/>
+	<img src="img/refresh.png" alt="" id="refresh" class="btn"/>
+</div>
+<script>
+	var oContainer = document.getElementById('container');
+	var oHome = document.getElementById('home');
+	var oRefresh = document.getElementById('refresh');
+	var oClose = document.getElementById('close');
+	var oFull = document.getElementById('full');
+	var oOpen = document.getElementById('open');
+	var oPrev = document.getElementById('prev');
+	var aImg = oContainer.getElementsByClassName('btn');
+
+
+	oFull.style.left = -150*Math.cos(0) + 'px';
+	oFull.style.bottom = -150*Math.sin(30) + 'px';
+
+	oOpen.style.right = -158*Math.cos(45) + 'px';
+	oOpen.style.bottom = -158*Math.sin(45) + 'px';
+
+	oPrev.style.right = -158*Math.cos(67.5) + 'px';
+	oPrev.style.bottom = -158*Math.sin(67.5) + 'px';
+
+
+</script>
+</body>
+</html>

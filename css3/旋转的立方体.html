@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #000000;
+			perspective: 1000px;
+			/*perspective-origin: 20% 50%;*/
+		}
+		#container{
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			position: relative;
+			/*background: #ff0000;*/
+			transform-style: preserve-3d;
+			animation: rotate 5s linear infinite;
+
+		}
+		@-webkit-keyframes rotate {
+			from{
+
+			}
+			to{
+				-webkit-transform: rotateY(-360deg);
+				-moz-transform: rotateY(-360deg);
+				-ms-transform: rotateY(-360deg);
+				-o-transform: rotateY(-360deg);
+				transform: rotateY(-360deg);
+			}
+		}
+		.cube{
+			width: 200px;
+			height: 200px;
+			background: #ffffff;
+			border: 1px solid #ffffff;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			opacity: 0.8;
+			position: absolute;
+			font-size: 100px;
+			text-align: center;
+			line-height: 200px;
+		}
+		.one{
+			-webkit-transform: rotateY(180deg) translateZ(100px);
+			-moz-transform: rotateY(180deg) translateZ(100px);
+			-ms-transform: rotateY(180deg) translateZ(100px);
+			-o-transform: rotateY(180deg) translateZ(100px);
+			transform: rotateY(180deg) translateZ(100px);
+		}
+		.two{
+			 -webkit-transform: rotateY(-90deg) translateZ(100px);
+			 -moz-transform: rotateY(-90deg) translateZ(100px);
+			 -ms-transform: rotateY(-90deg) translateZ(100px);
+			 -o-transform: rotateY(-90deg) translateZ(100px);
+			 transform: rotateY(-90deg) translateZ(100px);
+		 }
+		.three{
+			-webkit-transform: rotateX(-90deg) translateZ(100px);
+			-moz-transform: rotateX(-90deg) translateZ(100px);
+			-ms-transform: rotateX(-90deg) translateZ(100px);
+			-o-transform: rotateX(-90deg) translateZ(100px);
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		.four{
+			-webkit-transform: rotateX(90deg) translateZ(100px);
+			-moz-transform: rotateX(90deg) translateZ(100px);
+			-ms-transform: rotateX(90deg) translateZ(100px);
+			-o-transform: rotateX(90deg) translateZ(100px);
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.five{
+			-webkit-transform: rotateY(90deg) translateZ(100px);
+			-moz-transform: rotateY(90deg) translateZ(100px);
+			-ms-transform: rotateY(90deg) translateZ(100px);
+			-o-transform: rotateY(90deg) translateZ(100px);
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.six{
+			-webkit-transform: translateZ(100px);
+			-moz-transform: translateZ(100px);
+			-ms-transform: translateZ(100px);
+			-o-transform: translateZ(100px);
+			transform: translateZ(100px);
+		}
+		#small-cube{
+			width: 100px;
+			height: 100px;
+			margin: 0px auto;
+			position: relative;
+			top: 25%;
+			/*background: #ff0000;*/
+			transform-style: preserve-3d;
+			animation: r 5s linear infinite;
+		}
+		@-webkit-keyframes r {
+			from{
+
+			}
+			to{
+				-webkit-transform: rotate3D(1, 1, 1, -360deg);
+				-moz-transform: rotate3D(1, 1, 1, -360deg);
+				-ms-transform: rotate3D(1, 1, 1, -360deg);
+				-o-transform: rotate3D(1, 1, 1, -360deg);
+				transform: rotate3D(1, 1, 1, -360deg);
+			}
+		}
+		.small{
+			width: 100px;
+			height: 100px;
+			background: #000;
+			border: 1px solid #ffffff;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			opacity: 0.8;
+			position: absolute;
+		}
+		.a{
+			-webkit-transform: rotateY(180deg) translateZ(50px);
+			-moz-transform: rotateY(180deg) translateZ(50px);
+			-ms-transform: rotateY(180deg) translateZ(50px);
+			-o-transform: rotateY(180deg) translateZ(50px);
+			transform: rotateY(180deg) translateZ(50px);
+		}
+		.b{
+			-webkit-transform: rotateY(-90deg) translateZ(50px);
+			-moz-transform: rotateY(-90deg) translateZ(50px);
+			-ms-transform: rotateY(-90deg) translateZ(50px);
+			-o-transform: rotateY(-90deg) translateZ(50px);
+			transform: rotateY(-90deg) translateZ(50px);
+		}
+		.c{
+			-webkit-transform: rotateX(-90deg) translateZ(50px);
+			-moz-transform: rotateX(-90deg) translateZ(50px);
+			-ms-transform: rotateX(-90deg) translateZ(50px);
+			-o-transform: rotateX(-90deg) translateZ(50px);
+			transform: rotateX(-90deg) translateZ(50px);
+		}
+		.d{
+			-webkit-transform: rotateX(90deg) translateZ(50px);
+			-moz-transform: rotateX(90deg) translateZ(50px);
+			-ms-transform: rotateX(90deg) translateZ(50px);
+			-o-transform: rotateX(90deg) translateZ(50px);
+			transform: rotateX(90deg) translateZ(50px);
+		}
+		.e{
+			-webkit-transform: rotateY(90deg) translateZ(50px);
+			-moz-transform: rotateY(90deg) translateZ(50px);
+			-ms-transform: rotateY(90deg) translateZ(50px);
+			-o-transform: rotateY(90deg) translateZ(50px);
+			transform: rotateY(90deg) translateZ(50px);
+		}
+		.f{
+			-webkit-transform: translateZ(50px);
+			-moz-transform: translateZ(50px);
+			-ms-transform: translateZ(50px);
+			-o-transform: translateZ(50px);
+			transform: translateZ(50px);
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="cube one">1</div>
+		<div class="cube two">2</div>
+		<div class="cube three">3</div>
+		<div class="cube four">4</div>
+		<div class="cube five">5</div>
+		<div class="cube six">6</div>
+		<div id="small-cube">
+			<div class="small a">a</div>
+			<div class="small b">b</div>
+			<div class="small c">c</div>
+			<div class="small d">d</div>
+			<div class="small e">e</div>
+			<div class="small f">f</div>
+		</div>
+	</div>
+
+</body>
+</html>

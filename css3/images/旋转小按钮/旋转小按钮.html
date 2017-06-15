@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			position: relative;
+		}
+		#home{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		#container .btn{
+			position: absolute;
+			left: 158px;
+			top: 0;
+			transform-origin: 0 179px;
+			display: none;
+		}
+		.rotate{
+			-webkit-animation: rotate 1s ease backwards;
+			-o-animation: rotate 1s ease backwards;
+			animation: rotate 1s ease backwards;
+		}
+		@-webkit-keyframes rotate{
+			from{
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			to{
+				-webkit-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+				-ms-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+		@-webkit-keyframes move {
+			from{
+
+			}
+			to{
+
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<img src="img/close.png" alt="" id="close" class="btn"/>
+		<img src="img/full.png" alt="" id="full" class="btn"/>
+		<img src="img/home.png" alt="" id="home"/>
+		<img src="img/open.png" alt="" id="open" class="btn"/>
+		<img src="img/prev.png" alt="" id="prev" class="btn"/>
+		<img src="img/refresh.png" alt="" id="refresh" class="btn"/>
+	</div>
+	<script>
+		var oContainer = document.getElementById('container');
+		var oHome = document.getElementById('home');
+		var oClose = document.getElementById('close');
+		var oFull = document.getElementById('full');
+		var oOpen = document.getElementById('open');
+		var oPrev = document.getElementById('prev');
+		var oRefresh = document.getElementById('refresh');
+		var aImg = oContainer.getElementsByClassName('btn');
+
+		var flag = false;
+
+		oHome.onclick = function(){
+			if(flag == false){
+				oHome.className = 'rotate';
+				for(var i=0; i<aImg.length; i++){
+					aImg[i].style.transform = 'rotate('+ -24*i +'deg)';
+					aImg[i].style.display = 'block';
+				}
+			}else{
+				oHome.className = '';
+				oHome.style.transform = 'rotate(0deg)';
+				for(var i=0; i<aImg.length; i++){
+					aImg[i].style.transform = 'rotate(0deg)';
+					aImg[i].style.display = 'none';
+				}
+			}
+			flag = !flag;
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		#clock{
+			width: 300px;
+			height: 300px;
+			border: 2px solid #000000;
+			border-radius: 50%;
+			margin: 100px auto;
+			position: relative;
+		}
+		#pointer li{
+			width: 4px;
+			height: 10px;
+			background: #000000;
+			position: absolute;
+			left: 150px;
+			transform-origin: 0 150px;
+		}
+		#pointer li:nth-child(5n+1){
+			height: 15px;
+		}
+		#hour{
+			width: 8px;
+			height: 60px;
+			background: #000000;
+			left: 146px;
+			top: 90px;
+		}
+		#minute{
+			width: 6px;
+			height: 80px;
+			background: #0000ff;
+			left: 147px;
+			top: 70px;
+		}
+		#second{
+			width: 4px;
+			height: 100px;
+			background: #ff0000;
+			left: 148px;
+			top: 50px;
+		}
+		.indicator{
+			position: absolute;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			transform-origin: bottom;
+			/*transition: all 1s ease 0s;*/
+		}
+		@-webkit-keyframes rotate {
+
+		}
+		#dotted{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #000000;
+			position: absolute;
+			left: 145px;
+			top: 145px;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="clock">
+		<ul id="pointer"></ul>
+		<div id="hour" class="indicator"></div>
+		<div id="minute" class="indicator"></div>
+		<div id="second" class="indicator"></div>
+		<div id="dotted"></div>
+	</div>
+
+	<script>
+		var now, hour, minute, second;
+		var oPointer = document.getElementById('pointer');
+		var oHour = document.getElementById('hour');
+		var oMinute = document.getElementById('minute');
+		var oSecond = document.getElementById('second');
+		var content = '';
+		for(var i=0; i<60; i++){
+			content += '<li style="transform: rotate('+ i*6 +'deg)"></li>';
+		}
+		oPointer.innerHTML = content;
+
+		function run(){
+			now = new Date();
+			second = now.getSeconds();
+			minute = now.getMinutes() + second/60;
+			hour = now.getHours() + minute/60;
+			oHour.style.transform = 'rotate('+ hour*30 +'deg)';
+			oMinute.style.transform = 'rotate('+ minute*6 +'deg)';
+			oSecond.style.transform = 'rotate('+ second*6 +'deg)';
+		}
+		run();
+		setInterval(run, 1000);
+	</script>
+</body>
+</html>
