@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content-form{
+    height: 400px;
+    background: url("../image/login-bg.png") no-repeat center;
+    margin: 50px 100px 0 100px;
+}
+.content-form input,select{
+    margin-top: 10px;
+}
+form{
+    width: 320px;
+    margin: 0 auto;
+    padding: 120px;
+}
+.logreg{
+    margin-left: 30%;
+    width: 40px;
+    height: 26px;
+}
+.save{
+    width: 80px;
+    height: 26px;
+
+}

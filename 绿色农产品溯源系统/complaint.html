@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>绿色农产品溯源系统</title>
+    <link rel="stylesheet" href="./css/head.css"/>
+    <link rel="stylesheet" href="./css/complaint.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
+
+</head>
+<body>
+    <div id="header">
+        <p><a href="./index.html">绿色农产品溯源平台</a></p>
+        <ul id="menu">
+            <li><a href="./index.html">首页&nbsp;</a></li>
+            <li><a href="./news.html">&nbsp;新闻动态&nbsp;</a></li>
+            <li><a href="./policy.html">&nbsp;政策法规&nbsp;</a></li>
+            <li><a href="./platform.html">&nbsp;第三方追溯平台</a></li>
+        </ul>
+        <span id="login"><a href="./login.html">[登陆]</a></span>
+    </div>
+    <div id="search-box">
+        <div class="search">
+            <input type="text" placeholder="请输入商品条码" class="search-input"/>
+            <input type="submit" value="搜索" class="search-submit"/>
+        </div>
+        <div class="count">当前可追溯产品数量：1200</div>
+    </div>
+    <div id="comp">
+        <form action="" method="post">
+            <div class="main">
+                <br/><br/>
+                <div class="position">目前您在:首页>投诉</div>
+                <div class="list">
+                    <h2 class="list_name">投诉</h2>
+                    <hr style="height: 2px; border: none; border-top: 1px ridge #D3D3D3">
+                    <div class="complaint">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td class="complaint_name">商品条码</td>
+                                    <td>
+                                        <input name="prod_code" id="prod_code" type="text"/>
+                                        <em>*</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="complaint_name">投诉类型:</td>
+                                    <td>
+                                        <select name="comp_type" id="comp_type">
+                                            <option value="">请选择</option>
+                                            <option value="0">投诉举报</option>
+                                            <option value="1">咨询求助</option>
+                                            <option value="2">建言议事</option>
+                                        </select>
+                                        <em>*</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="complaint_name">投诉地区:</td>
+                                    <td>
+                                        <select name="comp_area" id="comp_area">
+                                            <option value="">请选择</option>
+                                            <option value="11">哈尔滨</option>
+                                            <option value="12">齐齐哈尔</option>
+                                            <option value="13">大庆</option>
+                                            <option value="14">牡丹江</option>
+                                        </select>
+                                        <em>*</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="complaint_name">标题:</td>
+                                    <td>
+                                        <input name="comp_title" id="comp_title" type="text"/>
+                                        <em>*</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="complaint_name">投诉原因:</td>
+                                    <td>
+                                        <textarea name="comp_content" id="comp_content" rows="10" cols="56"></textarea>
+                                        <em>*</em>
+                                        <span id="count style=font-size:12px;color:black;margin-left:230px;">已输入：0/500字符</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="complaint_name">投诉人姓名：</td>
+                                    <td>
+                                        <input name="comp_name" id="comp_name" type="text"/>
+                                        <em>*</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="complaint_name">投诉人电话：</td>
+                                    <td>
+                                        <input name="comp_number" id="comp_number" type="text"/>
+                                        <em>*</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button class="complaint_btn" id="button" >提交</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="r_window">
+                    <div class="window_tit">联系我们</div>
+                    <div class="window_con">
+                        <p>公司：绿色农产品溯源</p>
+                        <p>电话：123456</p>
+                        <p>邮箱：11111@qq.com</p>
+                        <p>地址：哈尔滨理工大学</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div id="footer">
+        <p class="p1">关于平台丨联系我们丨中国物品编码中心丨技术资料</p>
+        <p class="p2">哈理工&copy;2017.com All right reserved&nbsp;&nbsp;哈理工&nbsp;版权所有</p>
+    </div>
+</body>
+
+</html>

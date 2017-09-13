@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>文本框得到失去焦点</title>
+	<script src="../../jquery-1.12.4.js"></script>
+</head>
+<body>
+	<form action="#">
+		<fieldset>
+			<legend>个人基本信息</legend>
+			<label for="username">用户名：</label>
+			<input type="text" id="username"/><br/><br/>
+			<label for="password">密码</label>
+			<input type="password" id="password"/><br/><br/>
+			<label for="detail">详细信息</label>
+			<textarea id="detail" cols="20" rows="2"></textarea><br/>
+		</fieldset>
+	</form>
+	<script>
+		$(function(){
+			$(':input').focus(function(){
+				$(this).css('background', 'pink');
+			}).blur(function(){
+				$(this).css('background', 'white')
+			})
+		})
+	</script>
+</body>
+</html>

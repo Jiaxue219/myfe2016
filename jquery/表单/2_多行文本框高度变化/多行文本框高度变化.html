@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			width: 299px;
+			height: 147px;
+			margin: 150px 100px;
+		}
+		#tab span{
+			width: 50px;
+			height: 25px;
+			background: #888;
+			color: #ffffff;
+			display: inline-block;
+			text-align: center;
+			line-height: 25px;
+			cursor: pointer;
+		}
+	</style>
+	<script src="../../jquery-1.12.4.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="tab">
+			<span id="larger">放大</span>
+			<span id="smaller">缩小</span>
+		</div>
+		<div id="content">
+			<textarea name="text" cols="40" rows="8" id="text">多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化</textarea>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$('#larger').click(function(){
+				var height = $('#text').height();
+				if(height < 400){
+					$('#text').height(height + 50);
+				}
+			});
+			$('#smaller').click(function(){
+				var height = $('#text').height();
+				if(height > 100){
+					$('#text').height(height - 50);
+				}
+			});
+		})
+	</script>
+</body>
+</html>

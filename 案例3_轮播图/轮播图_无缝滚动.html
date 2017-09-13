@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		img{
+			border: 0;
+		}
+		#container{
+			width: 700px;
+			height: 400px;
+			margin: 50px auto;
+			position: relative;
+			/*overflow: hidden;*/
+		}
+		#content{
+			width: 280px;
+		}
+		#content img{
+			width: 700px;
+			height: 400px;
+			float: left;
+		}
+		#nav li,#arrows span{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: #000;
+			color: #ffffff;
+			margin-right: 10px;
+			text-align: center;
+			line-height: 20px;
+			cursor: pointer;
+		}
+		#nav li.selected{
+			background: orange;
+		}
+		#nav{
+			position: absolute;
+			right: 20px;
+			bottom: 10px;
+		}
+		#arrows{
+			position: absolute;
+			left: 20px;
+			bottom: 10px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="container">
+		<ul id="nav">
+			<li class="selected">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<div id="content">
+			<img src="img/1.jpg"  class="selected">
+			<img src="img/2.jpg">
+			<img src="img/3.jpg">
+			<img src="img/4.jpg">
+		</div>
+		<div id="arrows">
+			<span id="prev">&lt;</span>
+			<span id="next">&gt;</span>
+		</div>
+	</div>
+
+	<script>
+		var oContent = document.getElementById('content');
+		var oNav = document.getElementById('nav');
+		var oPrev = document.getElementById('prev');
+		var oNext = document.getElementById('next');
+
+
+
+
+	</script>
+</body>
+</html>

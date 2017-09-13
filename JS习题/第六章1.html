@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<!--编写程序，根据用户输入的数值，计算其平方、平方根和自然对数。-->
+
+	<script>
+		var num = window.prompt('请输入数值');
+		function math(num){
+			var square = Math.pow(num, 2);
+			var squareRoot = Math.sqrt(num);
+			var l = Math.log(num);
+			document.write(square +'</br>' + squareRoot + '</br>' + l);
+		}
+		math(num);
+	</script>
+</body>
+</html>

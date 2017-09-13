@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="app">
+	姓名：<input type="text" v-model="name"/>
+	班级：<input type="text" v-model="cla"/>
+	<button @click="add">add</button>
+	<ul>
+		<li v-for="(obj,index) in arr">
+			{{obj.name+','+obj.class}}
+			<button @click="del(index)">del</button>
+		</li>
+	</ul>
+</div>
+<script src="vue.js"></script>
+<script>
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			name:'',
+			cla:'',
+			arr:[]
+		},
+		methods:{
+			add:function(){
+				this.arr.push({name:this.name,class:this.cla});
+				this.name = '';
+				this.cla = '';
+			},
+			del:function(index){
+			//	console.log(index);
+				var newArr = this.arr.splice(index,1);
+			}
+		}
+	});
+</script>
+</body>
+</html>

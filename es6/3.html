@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	//Object.assign,相当于$extend();合并对象
+//	var obj = {a:1, b:2};
+//	var o = {c:3};
+//
+//	Object.assign(obj, {xx:666});
+//
+//	o.c = 666;//地址没有改变，所以c的值被改变为666
+//
+//	console.log(obj);
+
+	//Object.is();判断两个值是否相等
+//	console.log(+0 == -0);//----true
+//	console.log(NaN == NaN);//-- false
+//
+//	console.log(Object.is(+0 == -0));//---false
+//
+//	var arr = [1,2,3,4,5,4,3,2,NaN];
+//	console.log(arr.indexOf(NaN));//----返回-1，indexOf不能判断NaN
+
+	//Array.from();将类似与数组的结构转化为数组
+//	var obj = {1:1, 2:2, length:1};
+//
+//	console.log(Array.from(obj));
+
+	//Array.of();
+
+	//copyWithin();
+	//第一个参数：更新的起始位置；
+	//第二个参数：复制的起始位置；
+	//第三个参数：复制的结束位置（不包括），可省略（表示复制到最后）
+//	var arr = [1,2,3,4,5,6,7,8,9];
+//	console.log(arr.copyWithin(3,5,8));
+
+	//find();
+//	var arr = [1,2,3,4,5,6];
+//	var num = 0;
+//	var val = arr.find(function(value, index){
+//		num++;
+//		return value > 3;
+//	});
+//	console.log(val, num);
+
+
+	//includes();
+	//startWith();
+	//endWith();-----第二个参数表示到哪个位置结束
+	//repeat();88
+
+	//对象的属性简写
+//	var name = '11';
+//	var xx = 'age';
+//	var obj = {
+//		name,
+//		age: 21
+//	}
+//	console.log(obj[xx]);//动态对象的获取，[],
+
+	//动态属性
+
+	//字符串拼接
+//	var str = `fdfewrtrtw
+//	rtwertwertw
+//	twrt`;
+//	console.log(str);
+
+	//promise,解决函数回调嵌套的问题,只是管理回调，本身不能进行回调
+	//.then方法执行后，会自动返回一个promise对象
+	var p = new Promise(function(resolve,reject){
+		//进行异步操作
+		$.get('url', {}, function(d){
+			resolve();
+		},'text')
+	});
+	p.then(function(data){
+		//成功执行函数
+	},function(data){
+		//失败执行函数
+	});
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>拖拽</title>
+	<style>
+		#div{
+			width: 200px;
+			height: 200px;
+			background: pink;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="div" onselectstart="return false"></div>
+	<script>
+		var oDiv = document.getElementById('div');
+		var iDisX = iDisY = 0;
+
+		oDiv.onmousedown = function(e){
+			e = e || window.event;
+			iDisX = e.clientX - oDiv.offsetLeft;
+			iDisY = e.clientY - oDiv.offsetTop;
+
+			document.onmousemove = function(e){
+				e = e || window.event;
+				var iLeft = e.clientX - iDisX;
+				var iTop = e.clientY - iDisY;
+
+				if(iLeft <= 50){//磁力吸附
+					iLeft = 0;
+				}
+				if(iTop <= 50){
+					iTop = 0;
+				}
+				if(iLeft >= document.documentElement.clientWidth - oDiv.offsetWidth){
+					iLeft = document.documentElement.clientWidth - oDiv.offsetWidth;
+				}
+				if(iTop >= document.documentElement.clientHeight - oDiv.offsetHeight){
+					iTop = document.documentElement.clientHeight - oDiv.offsetHeight;
+				}
+				oDiv.style.left = iLeft + 'px';
+				oDiv.style.top = iTop + 'px';
+
+				return false;//阻止浏览器默认行为
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+		};
+	</script>
+</body>
+</html>

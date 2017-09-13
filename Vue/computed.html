@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="app">
+	{{a}}+{{b}}={{c}}
+</div>
+<script src="vue.js"></script>
+<script>
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			a:0,
+			b:0,
+			c:0
+		},
+		//计算属性，和函数的区别：
+		//计算属性有一个计算缓存，只要a,b的值不变，使用c的时候就不用重新计算，直接调用c的值就可以
+		//而函数每次调用c的时候都要重新计算
+//		computed:{
+//			c:function(){
+//				return this.a + this.b
+//			}
+//		}
+		watch:{
+			a:function(val,old){//---->新值旧值都可以读取
+				this.c = val + this.b;
+			}
+		}
+
+
+	});
+</script>
+</body>
+</html>

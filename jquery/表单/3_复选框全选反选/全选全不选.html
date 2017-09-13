@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="../../jquery-1.12.4.js"></script>
+</head>
+<body>
+	<form action="#">
+		你爱好的运动是？
+		<input type="checkbox" id="check"/>全选/全不选
+		<br/>
+		<input type="checkbox" name="items" value="足球"/>足球
+		<input type="checkbox" name="items" value="篮球"/>篮球
+		<input type="checkbox" name="items" value="羽毛球"/>羽毛球
+		<input type="checkbox" name="items" value="乒乓球"/>乒乓球
+		<br/>
+		<input type="button" id="submit" value="提	交"/>
+	</form>
+
+	<script>
+		$(function(){
+			$('#check').on('click', function(){
+				$('[name="items"]').prop('checked', $('#check').prop('checked'));
+
+			})
+		})
+	</script>
+</body>
+</html>

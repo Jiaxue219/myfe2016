@@ -1,0 +1,50 @@
+.carousel-container{
+    width: 520px;
+    height: 280px;
+    position: relative;
+}
+.carousel-imgs img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.carousel-imgs img.selected{
+    display: block;
+}
+.carousel-arrows .arrows{
+    width: 29px;
+    height: 50px;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+}
+.carousel-arrows .prev{
+    background-position: 0 -14px;
+    left: 0;
+}
+.carousel-arrows .next{
+    background-position: -30px -14px;
+    right: 0;
+}
+.carousel-tab{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.carousel-tab li{
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    color: #FFFFFF;
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.carousel-tab li.selected{
+    background: #ff9900;
+}

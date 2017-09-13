@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<title>Document</title>
+	<style>
+		/*breakpoint: 960  480*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h3 {
+			width: 960px;
+			height: 100px;
+			background: #cccccc;
+			text-align: center;
+			line-height: 100px;
+			margin: 30px auto;
+		}
+
+		figure {
+			width: 960px;
+			height: 540px;
+			margin: 0 auto;
+			background: url(./01.jpg) no-repeat;
+			background-size: 100% 100%;
+		}
+
+		section {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+		#left {
+			width: 630px;
+			height: 300px;
+			background: #00ff00;
+			float: left;
+		}
+
+		#right {
+			width: 300px;
+			height: 300px;
+			background: #ffff00;
+			float: right;
+		}
+
+		#left, #right {
+			display: table;
+		}
+
+		#left p, #right p {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		section p {
+			text-align: center;
+		}
+
+		footer {
+			clear: both;
+		}
+
+		@media (max-width: 959px) {
+			h3 {
+				width: 100%;
+			}
+
+			figure {
+				width: 100%;
+				height: 0;
+				padding-top: 56%;
+				background-image: url(./01_s_2x.jpg);
+			}
+
+			section {
+				width: 100%;
+			}
+
+			#left {
+				width: 67%;
+				/*margin-right: 3%;*/
+			}
+
+			#right {
+				width: 30%;
+			}
+		}
+
+		@media (max-width: 479px) {
+			figure{
+				width: 100%;
+				height: 0;
+				padding-top: 56%;
+				background-image: url(./01_s.jpg);
+			}
+			#left, #right {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h3>页眉</h3>
+	</header>
+	<nav>
+		<h3>导航</h3>
+	</nav>
+	<figure></figure>
+	<section>
+		<aside id="left">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut,rhoncus
+				vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Craspretium quam
+				quis magna facilisis, eget feugiat nisi lacinia.
+			</p>
+		</aside>
+		<aside id="right">
+			<p>
+				Donec dolor arcu, interdum sed turpis faucibus, placerat ultricies felis. Donec pulvinar gravida rhoncus.
+				Suspendisse vestibulum est eget dolor lobortis.
+			</p>
+		</aside>
+	</section>
+	<footer>
+		<h3>页脚</h3>
+	</footer>
+</body>
+</html>

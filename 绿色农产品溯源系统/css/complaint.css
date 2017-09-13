@@ -1,0 +1,93 @@
+body {
+    color: #000;
+    font-size: 13px;
+}
+.main{
+    background: #DCDCDC;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-left:20px;
+    padding-right:400px;
+    position: relative;
+
+}
+.list{
+    padding-left:10px;
+    padding-bottom:20px;
+
+    background: #F0FFFF;
+    border:1px solid #549d38
+}
+
+.complaint{
+
+}
+.complaint table{
+}
+.complaint table td{
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:14px;
+
+}
+.complaint table td em{
+    color:#f60;
+}
+.complaint table td input{
+    border:solid 1px #aaa;
+    width:270px;
+    height:28px;
+    line-height:28px;
+    padding-left:5px;
+}
+.complaint table td select{
+    padding:1px;
+    border:solid 1px #aaa;
+    width:280px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.complaint table td textarea{
+    padding:5px;
+    border:solid 1px #aaa;
+    width:350px;
+    height:110px;
+    line-height:14px;
+}
+.complaint_name{
+    width:150px;
+    text-align:right;
+}
+.complaint_btn{
+    width:98px;
+    height:39px;
+
+}
+
+
+/*联系我们*/
+.r_window{
+    position: absolute;
+    right: 30px;
+    top: 44px;
+    width: 264px;
+    border: solid 1px #549d38;
+}
+.window_tit{
+    width: 262px;
+    height: 30px;
+    background: #549b38;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+.window_con{
+    background: url("../image/phone.png") no-repeat;
+}
+.window_con p{
+    padding: 10px;
+    font-weight: 800;
+}

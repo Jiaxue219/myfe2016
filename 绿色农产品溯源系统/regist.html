@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绿色农产品溯源系统</title>
+    <link rel="stylesheet" href="./css/head.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
+</head>
+<body>
+    <div id="header">
+        <p><a href="./index.html">绿色农产品溯源平台</a></p>
+        <ul id="menu">
+            <li><a href="./index.html">首页&nbsp;</a></li>
+            <li><a href="./news.html">&nbsp;新闻动态&nbsp;</a></li>
+            <li><a href="./policy.html">&nbsp;政策法规&nbsp;</a></li>
+            <li><a href="./platform.html">&nbsp;第三方追溯平台</a></li>
+        </ul>
+        <span id="login"><a href=""></a></span>
+    </div>
+    <div id="search-box">
+        <div class="search">
+            <input type="text" placeholder="请输入商品条码" class="search-input"/>
+            <input type="submit" value="搜索" class="search-submit"/>
+        </div>
+        <div class="count">当前可追溯产品数量：1200</div>
+    </div>
+
+<div class="content-form">
+        <form action="">
+            用户名：<input type="text" name="username"/> <br/>
+            密&nbsp码：<input type="password" name="password"/> <br/>
+            确认密码：<input type="password" name="repwd"/> <br/>
+            性&nbsp别：
+            <input type="radio" name="sex" value="male"/>男
+            <input type="radio" name="sex" value="female"/>女 <br/>
+            电&nbsp话：<input type="text" name="user-phpne"/> <br/>
+            地&nbsp区：
+            <select name="province" id="province">
+                <option value="-1">请选择省份</option>
+            </select>
+            <select name="city" id="city">
+                <option value="-1">请选择城市</option>
+            </select> <br/>
+            <input type="submit" value="注册" class="logreg"/>
+        </form>
+    </div>
+    <div id="footer">
+        <p class="p1">关于平台丨联系我们丨中国物品编码中心丨技术资料</p>
+        <p class="p2">哈理工&copy;2017.com All right reserved&nbsp;&nbsp;哈理工&nbsp;版权所有</p>
+    </div>
+
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/city.js"></script>
+    <script src="js/city-two.js"></script>
+</body>
+</html>

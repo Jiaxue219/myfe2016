@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.content{
+    height: 700px;
+    background: #ccc;
+    margin: 0 160px;
+}
+.position{
+    padding: 26px 0 5px 20px;
+}
+.list {
+    float: left;
+    width: 608px;
+    background-color: #dee8d3;
+    border: solid 1px #9ec490;
+    margin-left: 20px;
+}
+.list_name{
+    margin: 16px 0 5px 10px;
+    border-bottom: solid 1px #bababa;
+}
+.list_tit li{
+    border-bottom: dashed 1px #bababa;
+    padding: 10px 0 10px 12px;
+    font-size: 14px;
+}
+.list_tit li span{
+    float: right;
+    padding-right: 10px;
+}
+
+/*联系我们*/
+.r_window{
+    float: left;
+    width: 264px;
+    border: solid 1px #549d38;
+    margin-left: 30px;
+}
+.window_tit{
+    width: 262px;
+    height: 30px;
+    background: #549b38;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+.window_con{
+    background: url("../image/phone.png") no-repeat;
+}
+.window_con p{
+    padding: 10px;
+    font-weight: 800;
+}
+

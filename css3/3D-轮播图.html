@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			width: 600px;
+			height: 350px;
+		}
+		#container{
+			width: 600px;
+			height: 350px;
+			margin: 100px auto;
+			position: relative;
+		}
+		#content img{
+			position: absolute;
+		}
+		#prev, #next{
+			width: 50px;
+			height: 50px;
+			background: #cccccc;
+			font-size: 50px;
+			text-align: center;
+			line-height: 50px;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			position: absolute;
+			-webkit-text-stroke: 2px #000;
+			-webkit-box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+			box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+		}
+		#prev{
+			left: -100px;
+			top: 150px;
+		}
+		#next{
+			right: -100px;
+			top: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			<img src="images/1.jpg" alt="" style="z-index: 1"/>
+			<img src="images/2.jpg" alt=""/>
+			<img src="images/3.jpg" alt=""/>
+			<img src="images/4.jpg" alt=""/>
+		</div>
+		<span id="prev">&lt;</span>
+		<span id="next">&gt;</span>
+	</div>
+
+</body>
+</html>
